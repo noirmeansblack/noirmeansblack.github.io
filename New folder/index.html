@@ -1,0 +1,115 @@
+<!doctype html>
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example page by noirmeansblack</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="jquery.flip-quote.css" rel="stylesheet"/>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.flip-quote.js"></script>
+
+<script src="script.js"></script>
+</head>
+<body>
+
+<section class="banner" role="banner">
+  <div class="banner-area">
+
+    <div class="banner-area-gradient">
+      <div class="w3-content w3-section">
+      <img class="mySlides" src="images\backgrounds\1.jpg">
+      <img class="mySlides" src="images\backgrounds\2.jpg">
+      <img class="mySlides" src="images\backgrounds\3.jpg">
+      </div>
+    </div>
+    <div class="inner-bg">
+      <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="banner-text text-center"> <a class="logo" href="#">ТУТ ЛОГОТИП</a>
+            <h1>ТУТ ТЕКСТ</h1>
+            <h1> </h1>
+            <a href="#subscribes" class="btn">До відкриття сайту:</a>
+              <p id="demo"></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intro" class="section intro">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="intro-content">
+          <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet varius elit, sed laoreet lorem.</h1>
+        </div>
+      </div>
+      <div class="col-md-7  col-md-offset-1 col-sm-6">
+        <div class="intro-content">
+          <h2>Example page</h2>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <q id="quote">Maecenas rhoncus sapien massa, aliquam ornare justo tristique vitae</q>. Duis sollicitudin nulla a leo sagittis, tristique imperdiet turpis sollicitudin.</p>
+  
+            <div id="container">...</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="subscribes" class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-5 subscribe-title">
+        <h2>Підпишись!</h2>
+      </div>
+      <div class="col-sm-12 col-md-7 subscribe-form">
+        <form method="post" action="https://www.google.com" name="subscribeform" id="subscribeform">
+          <input type="text" name="email" placeholder="Введи свою електронну адресу" id="subemail" />
+          <input type="submit" name="send" value="Notify me" id="subsubmit" class="btn2" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col col-md-5">
+        <p>Copyright © 2018 noirmeansblack.</p>
+      </div>
+      <div class="footer-col col-md-7">
+
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
